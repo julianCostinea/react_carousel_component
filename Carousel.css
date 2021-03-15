@@ -1,0 +1,93 @@
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    text-align: left;
+    height: 400px;
+}
+
+.carousel__track-container{
+    background-color: lightgreen;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 300ms ease-in;
+}
+
+.carousel__slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 4rem 1rem;
+}
+
+.carousel__button {
+    text-align: left;
+    position: absolute;
+    /* top 50 raises the TOP of the button to center. 
+    Then transform raises the middle of the button, so it's centered */
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border-radius: 50%;
+    padding: 9px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.carousel__button:focus{
+    outline: black;
+}
+
+.carousel__button--left{
+    left: -60px
+}
+.carousel__button--left img{
+    padding-right:4px ;
+}
+.carousel__button--right{
+    right: -60px
+}
+.carousel__button--right img{
+    padding-left:4px ;
+}
+
+.carousel__button img{
+    width: 20px;
+}
+
+.carousel__nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border: 0;
+    margin: 0 4px;
+    cursor: pointer;
+    width: 3rem;
+    height: 3px;
+    background: rgba(0,0,0, .3);
+}
+
+.carousel__indicator:focus {
+    outline: black;
+}
+
+.carousel__indicator.current-slide{
+    background: rgba(0,0,0, .8);
+}
+
+.is-hidden {
+    display: none;
+}
